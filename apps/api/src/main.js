@@ -2,7 +2,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import express from 'express';
-import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
@@ -20,32 +19,32 @@ process.on('unhandledRejection', (reason, promise) => {
   logger.error('Unhandled rejection at:', promise, 'reason:', reason);
 });
 
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://localhost:5173',
-  process.env.CORS_ORIGIN,
-].filter(Boolean);
-
 function isAllowedOrigin(origin) {
   if (!origin) return true;
-  if (allowedOrigins.includes(origin)) return true;
-  return /^https:\/\/sistema-check-.*\.vercel\.app$/.test(origin);
+  if (origin === 'http://localhost:3000') return true;
+  if (origin === 'http://localhost:5173') return true;
+  if (process.env.CORS_ORIGIN && origin === process.env.CORS_ORIGIN) return true;
+  if (/^https:\/\/sistema-check-.*\.vercel\.app$/.test(origin)) return true;
+  return false;
 }
 
-const corsOptions = {
-  origin(origin, callback) {
-    if (isAllowedOrigin(origin)) {
-      return callback(null, true);
-    }
-    return callback(new Error(`CORS blocked for origin: ${origin}`));
-  },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-};
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
 
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+  if (isAllowedOrigin(origin)) {
+    res.header('Access-Control-Allow-Origin', origin || '*');
+    res.header('Vary', 'Origin');
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  }
+
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(204);
+  }
+
+  next();
+});
 
 app.use(helmet());
 app.use(morgan('combined'));
