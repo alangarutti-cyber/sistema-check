@@ -20,19 +20,7 @@ process.on('unhandledRejection', (reason, promise) => {
   logger.error('Unhandled rejection at:', promise, 'reason:', reason);
 });
 
-process.on('SIGINT', async () => {
-  logger.info('Interrupted');
-  process.exit(0);
-});
-
-process.on('SIGTERM', async () => {
-  logger.info('SIGTERM signal received');
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-  logger.info('Exiting');
-  process.exit();
-});
-
-const explicitOrigins = [
+const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
   process.env.CORS_ORIGIN,
@@ -40,25 +28,24 @@ const explicitOrigins = [
 
 function isAllowedOrigin(origin) {
   if (!origin) return true;
-  if (explicitOrigins.includes(origin)) return true;
-
+  if (allowedOrigins.includes(origin)) return true;
   return /^https:\/\/sistema-check-.*\.vercel\.app$/.test(origin);
 }
 
-app.use(cors({
+const corsOptions = {
   origin(origin, callback) {
     if (isAllowedOrigin(origin)) {
       return callback(null, true);
     }
-
     return callback(new Error(`CORS blocked for origin: ${origin}`));
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+};
 
-app.options('*', cors());
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 app.use(helmet());
 app.use(morgan('combined'));
