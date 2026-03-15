@@ -1,0 +1,153 @@
+
+{
+  "common": {
+    "all": "All",
+    "pending": "Pending",
+    "in_progress": "In Progress",
+    "completed": "Completed",
+    "overdue": "Overdue",
+    "critical": "Critical",
+    "search": "Search...",
+    "filters": "Filters",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "nav": {
+    "operations": "Operations",
+    "dashboard": "Dashboard",
+    "my_checklists": "My Checklists",
+    "today_tasks": "Today's Tasks",
+    "management": "Management",
+    "templates": "Templates",
+    "schedule": "Schedule",
+    "alerts": "Alerts",
+    "reports": "Reports",
+    "configuration": "Configuration",
+    "users": "Users",
+    "settings": "Settings",
+    "logout": "Logout",
+    "home": "Home",
+    "tasks": "Tasks",
+    "lists": "Lists"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back",
+    "whats_happening": "Here's what's happening today.",
+    "checklists_today": "Checklists Today",
+    "completed": "Completed",
+    "overdue": "Overdue",
+    "critical_issues": "Critical Issues",
+    "today_operations": "Today's Operations",
+    "view_all": "View All",
+    "recent_activity": "Recent Activity"
+  },
+  "login": {
+    "title": "Login to CheckFlow",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Login",
+    "hint": "Try: admin@checkflow.com, manager@checkflow.com, or operator@checkflow.com"
+  },
+  "tasks": {
+    "title": "Today's Tasks",
+    "subtitle": "Manage and execute your scheduled checklists for today.",
+    "all_tasks": "All Tasks",
+    "progress": "Progress",
+    "items": "items",
+    "start": "Start Checklist",
+    "continue": "Continue",
+    "view_details": "View Details",
+    "all_caught_up": "All caught up!",
+    "no_tasks": "No tasks found for the selected filter."
+  },
+  "checklists": {
+    "title": "My Checklists",
+    "subtitle": "Manage and execute your assigned checklists.",
+    "search_placeholder": "Search checklists...",
+    "scheduled": "Scheduled",
+    "no_checklists": "No checklists found",
+    "try_adjusting": "Try adjusting your filters or search term."
+  },
+  "execution": {
+    "item": "Item",
+    "conform": "Conform",
+    "non_conform": "Non-Conform",
+    "na": "N/A",
+    "observation": "Observation",
+    "describe_issue": "Describe the issue...",
+    "evidence": "Evidence",
+    "take_photo": "Take Photo",
+    "upload_file": "Upload File",
+    "add_comment": "Add a comment or observation...",
+    "next_item": "Next Item",
+    "finish": "Finish Checklist",
+    "summary_title": "Execution Summary",
+    "critical_issues_detected": "Critical Issues Detected",
+    "critical_warning": "You have marked critical items as non-compliant. Submitting will trigger immediate alerts.",
+    "items_completed": "Items Completed",
+    "conformity": "Conformity",
+    "non_conformities": "Non-Conformities",
+    "observations_added": "Observations Added",
+    "review_again": "Review Again",
+    "confirm_submit": "Confirm & Submit",
+    "success": "Checklist completed successfully!",
+    "mandatory_warning": "Please complete all mandatory items."
+  },
+  "alerts": {
+    "title": "Alerts & Notifications",
+    "subtitle": "Monitor critical issues and operational delays.",
+    "mark_read": "Mark all as read",
+    "all_alerts": "All Alerts",
+    "unread": "Unread",
+    "high": "High",
+    "checklist": "Checklist",
+    "unit": "Unit",
+    "no_alerts": "No alerts",
+    "all_caught_up": "You're all caught up on notifications."
+  },
+  "models": {
+    "title": "Checklist Models",
+    "subtitle": "Manage templates and standard operating procedures.",
+    "create_new": "Create New",
+    "sector": "Sector",
+    "frequency": "Frequency",
+    "items": "Items",
+    "duplicate": "Duplicate"
+  },
+  "schedule": {
+    "title": "Schedule",
+    "subtitle": "Plan and assign future checklist executions.",
+    "schedule_new": "Schedule New",
+    "module_title": "Scheduling Module",
+    "module_desc": "The scheduling interface allows you to set up recurring or one-time checklist assignments for your team."
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Configure application preferences.",
+    "notifications": "Notifications",
+    "email_alerts": "Email Alerts",
+    "email_alerts_desc": "Receive critical alerts via email.",
+    "daily_digest": "Daily Digest",
+    "daily_digest_desc": "Receive a daily summary of executions."
+  },
+  "users": {
+    "title": "User Management",
+    "subtitle": "Manage access, roles, and assignments.",
+    "add_user": "Add User",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "actions": "Actions"
+  },
+  "companies": {
+    "title": "Organization Structure",
+    "subtitle": "Manage companies, units, and sectors.",
+    "companies": "Companies",
+    "units": "Units",
+    "sectors": "Sectors"
+  }
+}

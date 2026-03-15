@@ -1,0 +1,153 @@
+
+{
+  "common": {
+    "all": "Todos",
+    "pending": "Pendente",
+    "in_progress": "Em Andamento",
+    "completed": "Concluído",
+    "overdue": "Atrasado",
+    "critical": "Crítico",
+    "search": "Buscar...",
+    "filters": "Filtros",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Salvar",
+    "edit": "Editar",
+    "delete": "Excluir"
+  },
+  "nav": {
+    "operations": "Operações",
+    "dashboard": "Painel",
+    "my_checklists": "Meus Checklists",
+    "today_tasks": "Tarefas de Hoje",
+    "management": "Gestão",
+    "templates": "Modelos",
+    "schedule": "Agenda",
+    "alerts": "Alertas",
+    "reports": "Relatórios",
+    "configuration": "Configuração",
+    "users": "Usuários",
+    "settings": "Configurações",
+    "logout": "Sair",
+    "home": "Início",
+    "tasks": "Tarefas",
+    "lists": "Listas"
+  },
+  "dashboard": {
+    "title": "Painel",
+    "welcome": "Bem-vindo de volta",
+    "whats_happening": "Aqui está o que está acontecendo hoje.",
+    "checklists_today": "Checklists Hoje",
+    "completed": "Concluídos",
+    "overdue": "Atrasados",
+    "critical_issues": "Problemas Críticos",
+    "today_operations": "Operações de Hoje",
+    "view_all": "Ver Todos",
+    "recent_activity": "Atividade Recente"
+  },
+  "login": {
+    "title": "Entrar no CheckFlow",
+    "email": "E-mail",
+    "password": "Senha",
+    "submit": "Entrar",
+    "hint": "Tente: admin@checkflow.com, manager@checkflow.com, ou operator@checkflow.com"
+  },
+  "tasks": {
+    "title": "Tarefas de Hoje",
+    "subtitle": "Gerencie e execute seus checklists agendados para hoje.",
+    "all_tasks": "Todas as Tarefas",
+    "progress": "Progresso",
+    "items": "itens",
+    "start": "Iniciar Checklist",
+    "continue": "Continuar",
+    "view_details": "Ver Detalhes",
+    "all_caught_up": "Tudo em dia!",
+    "no_tasks": "Nenhuma tarefa encontrada para o filtro selecionado."
+  },
+  "checklists": {
+    "title": "Meus Checklists",
+    "subtitle": "Gerencie e execute seus checklists atribuídos.",
+    "search_placeholder": "Buscar checklists...",
+    "scheduled": "Agendado",
+    "no_checklists": "Nenhum checklist encontrado",
+    "try_adjusting": "Tente ajustar seus filtros ou termo de busca."
+  },
+  "execution": {
+    "item": "Item",
+    "conform": "Conforme",
+    "non_conform": "Não Conforme",
+    "na": "N/A",
+    "observation": "Observação",
+    "describe_issue": "Descreva o problema...",
+    "evidence": "Evidência",
+    "take_photo": "Tirar Foto",
+    "upload_file": "Enviar Arquivo",
+    "add_comment": "Adicionar um comentário ou observação...",
+    "next_item": "Próximo Item",
+    "finish": "Finalizar Checklist",
+    "summary_title": "Resumo da Execução",
+    "critical_issues_detected": "Problemas Críticos Detectados",
+    "critical_warning": "Você marcou itens críticos como não conformes. O envio acionará alertas imediatos.",
+    "items_completed": "Itens Concluídos",
+    "conformity": "Conformidade",
+    "non_conformities": "Não Conformidades",
+    "observations_added": "Observações Adicionadas",
+    "review_again": "Revisar Novamente",
+    "confirm_submit": "Confirmar e Enviar",
+    "success": "Checklist concluído com sucesso!",
+    "mandatory_warning": "Por favor, conclua todos os itens obrigatórios."
+  },
+  "alerts": {
+    "title": "Alertas e Notificações",
+    "subtitle": "Monitore problemas críticos e atrasos operacionais.",
+    "mark_read": "Marcar todos como lidos",
+    "all_alerts": "Todos os Alertas",
+    "unread": "Não Lidos",
+    "high": "Alto",
+    "checklist": "Checklist",
+    "unit": "Unidade",
+    "no_alerts": "Sem alertas",
+    "all_caught_up": "Você está em dia com as notificações."
+  },
+  "models": {
+    "title": "Modelos de Checklist",
+    "subtitle": "Gerencie modelos e procedimentos operacionais padrão.",
+    "create_new": "Criar Novo",
+    "sector": "Setor",
+    "frequency": "Frequência",
+    "items": "Itens",
+    "duplicate": "Duplicar"
+  },
+  "schedule": {
+    "title": "Agenda",
+    "subtitle": "Planeje e atribua futuras execuções de checklists.",
+    "schedule_new": "Agendar Novo",
+    "module_title": "Módulo de Agendamento",
+    "module_desc": "A interface de agendamento permite configurar atribuições de checklists recorrentes ou únicas para sua equipe."
+  },
+  "settings": {
+    "title": "Configurações",
+    "subtitle": "Configure as preferências do aplicativo.",
+    "notifications": "Notificações",
+    "email_alerts": "Alertas por E-mail",
+    "email_alerts_desc": "Receba alertas críticos por e-mail.",
+    "daily_digest": "Resumo Diário",
+    "daily_digest_desc": "Receba um resumo diário das execuções."
+  },
+  "users": {
+    "title": "Gestão de Usuários",
+    "subtitle": "Gerencie acessos, funções e atribuições.",
+    "add_user": "Adicionar Usuário",
+    "name": "Nome",
+    "email": "E-mail",
+    "role": "Função",
+    "actions": "Ações"
+  },
+  "companies": {
+    "title": "Estrutura Organizacional",
+    "subtitle": "Gerencie empresas, unidades e setores.",
+    "companies": "Empresas",
+    "units": "Unidades",
+    "sectors": "Setores"
+  }
+}

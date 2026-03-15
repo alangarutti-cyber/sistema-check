@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core UI */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    
+    /* Semantic Colors */
+    --primary: 217 91% 60%; /* #3B82F6 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    
+    /* Status Colors */
+    --success: 160 84% 39%; /* #10B981 */
+    --success-foreground: 0 0% 100%;
+    --error: 0 84% 60%; /* #EF4444 */
+    --error-foreground: 0 0% 100%;
+    --warning: 45 93% 47%; /* #F59E0B */
+    --warning-foreground: 0 0% 100%;
+    --critical: 0 72% 51%; /* #DC2626 */
+    --critical-foreground: 0 0% 100%;
+    --info: 217 91% 60%; /* #3B82F6 */
+    --info-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Role Colors */
+    --role-admin: 0 84% 60%; /* Red */
+    --role-manager: 217 91% 60%; /* Blue */
+    --role-supervisor: 160 84% 39%; /* Green */
+    --role-operator: 215 16% 47%; /* Gray */
+
+    /* WhatsApp Alerts Specific Colors */
+    --wa-success: 160 84% 39%;
+    --wa-error: 0 84% 60%;
+    --wa-pending: 45 93% 47%;
+    --wa-info: 217 91% 60%;
+    --wa-neutral: 215 16% 47%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 217 91% 60%;
+    --radius: 0.75rem;
+
+    /* Form Input Variables */
+    --input-bg: 0 0% 100%;
+    --input-border: 214.3 31.8% 91.4%;
+    --input-focus: 217 91% 60%;
+    --input-text: 222.2 84% 4.9%;
+    --input-placeholder: 215.4 16.3% 46.9%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 217 91% 60%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --error: 0 84% 60%;
+    --error-foreground: 0 0% 100%;
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+    --critical: 0 72% 51%;
+    --critical-foreground: 0 0% 100%;
+    --info: 217 91% 60%;
+    --info-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Role Colors */
+    --role-admin: 0 84% 60%;
+    --role-manager: 217 91% 60%;
+    --role-supervisor: 160 84% 39%;
+    --role-operator: 215 20% 65%;
+
+    /* WhatsApp Alerts Specific Colors */
+    --wa-success: 160 84% 39%;
+    --wa-error: 0 84% 60%;
+    --wa-pending: 45 93% 47%;
+    --wa-info: 217 91% 60%;
+    --wa-neutral: 215 20% 65%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 217 91% 60%;
+
+    /* Form Input Variables */
+    --input-bg: 222.2 84% 4.9%;
+    --input-border: 217.2 32.6% 17.5%;
+    --input-focus: 217 91% 60%;
+    --input-text: 210 40% 98%;
+    --input-placeholder: 215 20.2% 65.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  h1, .h1 { @apply text-4xl md:text-5xl font-extrabold leading-tight tracking-tight; letter-spacing: -0.02em; }
+  h2, .h2 { @apply text-2xl md:text-3xl font-bold leading-snug tracking-tight; letter-spacing: -0.01em; }
+  h3, .h3 { @apply text-xl md:text-2xl font-semibold leading-snug; }
+  .body-text { @apply text-base leading-relaxed max-w-[65ch]; }
+
+  /* Global Form Element Styles for better visibility */
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  input[type="time"],
+  textarea,
+  select {
+    @apply bg-[hsl(var(--input-bg))] border border-[hsl(var(--input-border))] text-[hsl(var(--input-text))] 
+           placeholder:text-[hsl(var(--input-placeholder))] rounded-md px-3 py-2
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--input-focus))] focus-visible:border-transparent
+           transition-all duration-200 shadow-sm;
+  }
+
+  textarea {
+    @apply min-h-[80px] resize-y;
+  }
+}
+
+@layer components {
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold transition-colors;
+  }
+  
+  /* WhatsApp Alerts Badges */
+  .badge-wa-success { @apply bg-[hsl(var(--wa-success))]/10 text-[hsl(var(--wa-success))] border border-[hsl(var(--wa-success))]/20; }
+  .badge-wa-error { @apply bg-[hsl(var(--wa-error))]/10 text-[hsl(var(--wa-error))] border border-[hsl(var(--wa-error))]/20; }
+  .badge-wa-pending { @apply bg-[hsl(var(--wa-pending))]/10 text-[hsl(var(--wa-pending))] border border-[hsl(var(--wa-pending))]/20; }
+  .badge-wa-info { @apply bg-[hsl(var(--wa-info))]/10 text-[hsl(var(--wa-info))] border border-[hsl(var(--wa-info))]/20; }
+  .badge-wa-neutral { @apply bg-[hsl(var(--wa-neutral))]/10 text-[hsl(var(--wa-neutral))] border border-[hsl(var(--wa-neutral))]/20; }
+}
